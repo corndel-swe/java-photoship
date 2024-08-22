@@ -1,25 +1,26 @@
- package com.corndel.photoship.exercises;
- import static org.junit.jupiter.api.Assertions.assertEquals;
+package com.corndel.photoship.exercises;
+
+import static com.corndel.photoship.exercises.Exercise2a.arrayRotate;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 
 public class Exercise2aTest {
 
-  //puts the last element to the front
+  // puts the last element to the front
   @Test
-  void testName() {
-    assertArrayEquals(arrayRotate(new int[] {"x", "y", "z"}), new int[] {"z", "x", "y"});
+  void rotates() {
+    assertArrayEquals(
+        arrayRotate(new ArrayList<String>(List.of("x", "y", "z"))).toArray(),
+        new String[] {"z", "x", "y"});
   }
 
-  //should swap the elements in a two-element array
+  // should swap the elements in a two-element array
   @Test
-  void testName() {
-    assertArrayEquals(arrayRotate(new int[] {1, 2}), new int[] {2, 1});
-  }
-
-  //should correctly rotate elements in an array with mixed types
-  @Test
-  void testName() {
-    assertArrayEquals(arrayRotate(new int[] {1, "a", true}), new int[] {true, 1, "a"});
+  void swaps() {
+    assertArrayEquals(
+        arrayRotate(new ArrayList<Integer>(List.of(1, 2))).toArray(), new Integer[] {2, 1});
   }
 }
