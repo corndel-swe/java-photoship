@@ -8,14 +8,12 @@ public class Exercise3b {
    *
    * <p>e.g. (2.5, "$") => "$2.50" e.g. (12.83795, "£") => "£12.84"
    *
-   * @param {number} amount - The amount of money
-   * @param {string} currency - The currency symbol
-   * @returns {string} currency The formatted number
+   * @param {double} amount - The amount of money
+   * @param {String} currency - The currency symbol
+   * @returns {String} currency The formatted number
    */
   public static String formatPrice(double amount, String currency) {
-    // // TODO
-    // return "TODO";
-
-    return String.format("%s%.2f", currency, amount);
+    // TODO
+    return "TODO";
   }
 }

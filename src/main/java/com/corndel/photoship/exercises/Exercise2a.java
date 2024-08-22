@@ -14,11 +14,7 @@ public class Exercise2a {
    * @returns {List<T>} The list with the last element at the front
    */
   public static <T> List<T> arrayRotate(List<T> list) {
-    // // TODO
-    // return new ArrayList<>();
-
-    var tmp = list.removeLast();
-    list.addFirst(tmp);
-    return list;
+    // TODO
+    return null;
   }
 }

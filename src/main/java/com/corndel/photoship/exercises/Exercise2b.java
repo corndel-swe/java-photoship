@@ -9,18 +9,11 @@ public class Exercise2b {
    *
    * <p>e.g. [1400, 500, 2100] => [1.4, 0.5, 2.1]
    *
-   * @param {number[]} arr - An array of KB
-   * @returns {Array} The array in MB
+   * @param {double[]} arr - An array of KB
+   * @returns {double[]} The array in MB
    */
   public static double[] convertFilesizes(double[] arr) {
-    // // TODO
-    // return new double[] {};
-    double[] result = new double[arr.length];
-
-    for (int i = 0; i < arr.length; i++) {
-      result[i] = arr[i] / 1000.0;
-    }
-
-    return result;
+    // TODO
+    return new double[] {};
   }
 }
