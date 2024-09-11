@@ -16,6 +16,7 @@ public class Exercise2b {
    * @returns {double[]} The list in MB
    */
   public static List<Double> convertFilesizes(List<Double> files) {
-    return files.stream().map(x -> x / 1000.).toList();
+    // TODO
+    return null;
   }
 }

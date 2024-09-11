@@ -16,6 +16,7 @@ public class Exercise2a {
    * @returns {List} The list containing only the middle elements
    */
   public static <T> List<T> getMiddle(List<T> list) {
-    return list.subList(1, list.size() - 1);
+    // TODO
+    return null;
   }
 }
