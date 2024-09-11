@@ -1,7 +1,7 @@
 package com.corndel.photoship.exercises;
 
 import static com.corndel.photoship.exercises.Exercise1b.arrayRotate;
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,15 +12,16 @@ public class Exercise1bTest {
   // puts the last element to the front
   @Test
   void rotates() {
-    assertArrayEquals(
-        arrayRotate(new ArrayList<String>(List.of("x", "y", "z"))).toArray(),
-        new String[] { "z", "x", "y" });
+    assertEquals(
+        List.of("z", "x", "y"),
+        arrayRotate(new ArrayList<>(List.of("x", "y", "z"))));
   }
 
-  // should swap the elements in a two-element array
+  // should swap the elements in a two-element list
   @Test
   void swaps() {
-    assertArrayEquals(
-        arrayRotate(new ArrayList<Integer>(List.of(1, 2))).toArray(), new Integer[] { 2, 1 });
+    assertEquals(
+        List.of(2, 1),
+        arrayRotate(new ArrayList<>(List.of(1, 2))));
   }
 }

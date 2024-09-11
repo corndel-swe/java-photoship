@@ -13,7 +13,6 @@ public class Exercise1a {
    * @returns {int} The sum of the first and last elements.
    */
   public static int firstAddLast(int[] nums) {
-    // TODO
-    return 0;
+    return nums[0] + nums[nums.length - 1];
   }
 }

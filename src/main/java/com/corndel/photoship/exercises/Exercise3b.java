@@ -14,7 +14,6 @@ public class Exercise3b {
    * @returns {String} currency The formatted number
    */
   public static String formatPrice(double amount, String currency) {
-    // TODO
-    return "TODO";
+    return String.format("%s%.2f", currency, amount);
   }
 }

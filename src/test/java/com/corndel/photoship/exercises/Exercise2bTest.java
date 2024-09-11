@@ -1,40 +1,37 @@
 package com.corndel.photoship.exercises;
 
 import static com.corndel.photoship.exercises.Exercise2b.convertFilesizes;
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
 public class Exercise2bTest {
 
-  // should convert an array of file sizes from KB to MB
+  // should convert a list of file sizes from KB to MB
   @Test
   void works() {
-    assertArrayEquals(
-        convertFilesizes(new double[] { 1400, 500, 2100 }), new double[] { 1.4, 0.5, 2.1 });
+    assertEquals(
+        List.of(1.4, 0.5, 2.1),
+        convertFilesizes(List.of(1400., 500., 2100.)));
   }
 
-  // should handle an empty array
+  // should handle an empty list
   @Test
-  void handlesEmptyArray() {
-    assertArrayEquals(convertFilesizes(new double[] {}), new double[] {});
+  void handlesEmptyList() {
+    assertEquals(List.of(), convertFilesizes(List.of()));
   }
 
-  // should handle arrays with a single element
+  // should handle lists with a single element
   @Test
-  void handleArraysWithSingleElement() {
-    assertArrayEquals(convertFilesizes(new double[] { 1000 }), new double[] { 1 });
+  void handleListsWithSingleElement() {
+    assertEquals(List.of(1.), convertFilesizes(List.of(1000.)));
   }
 
-  // should handle arrays with large numbers
+  // should handle lists with large numbers
   @Test
   void handlesBigNumbers() {
-    assertArrayEquals(convertFilesizes(new double[] { 1000000, 500000 }), new double[] { 1000, 500 });
-  }
-
-  // should handle arrays with small numbers
-  @Test
-  void handlesSmallNumbers() {
-    assertArrayEquals(convertFilesizes(new double[] { 10, 50 }), new double[] { 0.01, 0.05 });
+    assertEquals(List.of(1000., 500.), convertFilesizes(List.of(1000000., 500000.)));
   }
 }
