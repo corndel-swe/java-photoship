@@ -15,8 +15,7 @@ public class Pixels {
    */
   public static List<Integer> stripRed(List<Integer> rgb) {
     // Set the red value (index 0) to 0
-    rgb.set(0, 0);
-    return rgb;
+    return null;
   }
 
   /**
@@ -30,8 +29,7 @@ public class Pixels {
    */
   public static List<Integer> stripGreen(List<Integer> rgb) {
     // Set the green value (index 1) to 0
-    rgb.set(1, 0);
-    return rgb;
+    return null;
   }
 
   /**
@@ -45,8 +43,7 @@ public class Pixels {
    */
   public static List<Integer> stripBlue(List<Integer> rgb) {
     // Set the blue value (index 2) to 0
-    rgb.set(2, 0);
-    return rgb;
+    return null;
   }
 
   /**
@@ -61,10 +58,7 @@ public class Pixels {
    */
   public static List<Integer> invert(List<Integer> rgb) {
     // Invert each color value by subtracting it from 255
-    rgb.set(0, 255 - rgb.get(0)); // Red
-    rgb.set(1, 255 - rgb.get(1)); // Green
-    rgb.set(2, 255 - rgb.get(2)); // Blue
-    return rgb;
+    return null;
   }
 
   /**
@@ -78,13 +72,9 @@ public class Pixels {
    */
   public static List<Integer> grayscale(List<Integer> rgb) {
     // Calculate the average of the red, green, and blue values
-    int avg = (rgb.get(0) + rgb.get(1) + rgb.get(2)) / 3;
 
     // Set all components to the average value to create a grayscale effect
-    rgb.set(0, avg);
-    rgb.set(1, avg);
-    rgb.set(2, avg);
-    return rgb;
+    return null;
   }
 
   /**
@@ -100,15 +90,10 @@ public class Pixels {
    */
   public static List<Integer> blackAndWhite(List<Integer> rgb) {
     // Calculate the average of the red, green, and blue values
-    int avg = (rgb.get(0) + rgb.get(1) + rgb.get(2)) / 3;
 
     // If the average is below 128, set all values to 0 (black); otherwise, set them
     // to 255 (white)
-    int bw = avg < 128 ? 0 : 255;
-    rgb.set(0, bw);
-    rgb.set(1, bw);
-    rgb.set(2, bw);
-    return rgb;
+    return null;
   }
 
   /**
@@ -123,26 +108,8 @@ public class Pixels {
    * @return The RGB list with only the specified color channel.
    */
   public static List<Integer> colorChannel(List<Integer> rgb, char color) {
-    switch (color) {
-      case 'r':
-        // Keep the red value, set green and blue to 0
-        rgb.set(1, 0); // Green
-        rgb.set(2, 0); // Blue
-        break;
-      case 'g':
-        // Keep the green value, set red and blue to 0
-        rgb.set(0, 0); // Red
-        rgb.set(2, 0); // Blue
-        break;
-      case 'b':
-        // Keep the blue value, set red and green to 0
-        rgb.set(0, 0); // Red
-        rgb.set(1, 0); // Green
-        break;
-      default:
-        throw new IllegalArgumentException("Invalid color channel: " + color);
-    }
-    return rgb;
+    // TODO
+    return null;
   }
 
   /**
@@ -160,21 +127,12 @@ public class Pixels {
    */
   public static List<Integer> sepia(List<Integer> rgb) {
     // Extract the original red, green, and blue values
-    int r = rgb.get(0);
-    int g = rgb.get(1);
-    int b = rgb.get(2);
 
     // Apply the sepia tone formula to each color component
-    int newRed = (int) Math.min(255, (0.393 * r) + (0.769 * g) + (0.189 * b));
-    int newGreen = (int) Math.min(255, (0.349 * r) + (0.686 * g) + (0.168 * b));
-    int newBlue = (int) Math.min(255, (0.272 * r) + (0.534 * g) + (0.131 * b));
 
     // Update the RGB list with the new sepia values
-    rgb.set(0, newRed);
-    rgb.set(1, newGreen);
-    rgb.set(2, newBlue);
 
-    return rgb;
+    return null;
   }
 
   /**
@@ -193,15 +151,9 @@ public class Pixels {
    */
   public static List<Integer> adjustBrightness(List<Integer> rgb, int brightness) {
     // Adjust the red, green, and blue values and clamp them between 0 and 255
-    int r = Math.min(255, Math.max(0, rgb.get(0) + brightness));
-    int g = Math.min(255, Math.max(0, rgb.get(1) + brightness));
-    int b = Math.min(255, Math.max(0, rgb.get(2) + brightness));
 
     // Update the RGB list with the new brightness-adjusted values
-    rgb.set(0, r);
-    rgb.set(1, g);
-    rgb.set(2, b);
 
-    return rgb;
+    return null;
   }
 }
