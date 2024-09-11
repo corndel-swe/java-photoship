@@ -15,7 +15,8 @@ public class Pixels {
    */
   public static List<Integer> stripRed(List<Integer> rgb) {
     // Set the red value (index 0) to 0
-    return null;
+    rgb.set(0, 0);
+    return rgb;
   }
 
   /**
