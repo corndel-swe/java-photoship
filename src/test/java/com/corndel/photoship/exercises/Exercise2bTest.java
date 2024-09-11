@@ -11,7 +11,7 @@ public class Exercise2bTest {
   @Test
   void works() {
     assertArrayEquals(
-        convertFilesizes(new double[] {1400, 500, 2100}), new double[] {1.4, 0.5, 2.1});
+        convertFilesizes(new double[] { 1400, 500, 2100 }), new double[] { 1.4, 0.5, 2.1 });
   }
 
   // should handle an empty array
@@ -23,18 +23,18 @@ public class Exercise2bTest {
   // should handle arrays with a single element
   @Test
   void handleArraysWithSingleElement() {
-    assertArrayEquals(convertFilesizes(new double[] {1000}), new double[] {1});
+    assertArrayEquals(convertFilesizes(new double[] { 1000 }), new double[] { 1 });
   }
 
   // should handle arrays with large numbers
   @Test
   void handlesBigNumbers() {
-    assertArrayEquals(convertFilesizes(new double[] {1000000, 500000}), new double[] {1000, 500});
+    assertArrayEquals(convertFilesizes(new double[] { 1000000, 500000 }), new double[] { 1000, 500 });
   }
 
   // should handle arrays with small numbers
   @Test
   void handlesSmallNumbers() {
-    assertArrayEquals(convertFilesizes(new double[] {10, 50}), new double[] {0.01, 0.05});
+    assertArrayEquals(convertFilesizes(new double[] { 10, 50 }), new double[] { 0.01, 0.05 });
   }
 }

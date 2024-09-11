@@ -1,6 +1,6 @@
 package com.corndel.photoship.exercises;
 
-import static com.corndel.photoship.exercises.Exercise2a.arrayRotate;
+import static com.corndel.photoship.exercises.Exercise2a.getMiddle;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import java.util.ArrayList;
@@ -9,18 +9,22 @@ import org.junit.jupiter.api.Test;
 
 public class Exercise2aTest {
 
-  // puts the last element to the front
+  // should return middle elements of a multi-element array
   @Test
-  void rotates() {
+  void middleMultiple() {
     assertArrayEquals(
-        arrayRotate(new ArrayList<String>(List.of("x", "y", "z"))).toArray(),
-        new String[] {"z", "x", "y"});
+        getMiddle(new ArrayList<>(List.of(4, 6, 1, 7, 9))).toArray(), new Integer[] { 6, 1, 7 });
   }
 
-  // should swap the elements in a two-element array
+  // should return a single middle element for an array of three elements
   @Test
-  void swaps() {
-    assertArrayEquals(
-        arrayRotate(new ArrayList<Integer>(List.of(1, 2))).toArray(), new Integer[] {2, 1});
+  void middleSingle() {
+    assertArrayEquals(getMiddle(new ArrayList<>(List.of(2, 3, 4))).toArray(), new Integer[] { 3 });
+  }
+
+  // should return an empty array for a two-element array
+  @Test
+  void noMiddle() {
+    assertArrayEquals(getMiddle(new ArrayList<>(List.of(1, 2))).toArray(), new Integer[] {});
   }
 }

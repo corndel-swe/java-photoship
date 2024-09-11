@@ -3,17 +3,18 @@ package com.corndel.photoship.exercises;
 import java.util.List;
 
 public class Exercise1b {
-  // https://tech-docs.corndel.com/js/array-slice.html
+  // https://tech-docs.corndel.com/java/lists.html
 
   /**
-   * Returns the middle elements of the array, without the first and last elements.
+   * Given an array, take the last element and put it on the front
    *
-   * <p>e.g. [4, 6, 1, 7, 9] => [6, 1, 7]
+   * <p>
+   * e.g. {"x", "y", "z"} => {"z", "x", "y"}
    *
-   * @param {List} list - The list to process
-   * @returns {List} The list containing only the middle elements
+   * @param {List<T>} list - The input list
+   * @returns {List<T>} The list with the last element at the front
    */
-  public static <T> List<T> getMiddle(List<T> list) {
+  public static <T> List<T> arrayRotate(List<T> list) {
     // TODO
     return null;
   }
