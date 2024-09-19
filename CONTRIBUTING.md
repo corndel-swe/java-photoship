@@ -20,7 +20,7 @@ process an image already. Notice that `cat.jpg` is in the
 Open a terminal in the root of the project and run
 
 ```bash
-./mvnw exec:java -Dexec.args="strip-red cat.jpg"
+./mvnw clean compile exec:java -Dexec.args="strip-red cat.jpg"
 ```
 
 Now check out `src/main/resources/imgoutput.jpg` - if all goes well you should
@@ -44,7 +44,7 @@ check each one works
 E.g. when you complete the `stripBlue` function, try
 
 ```bash
-./mvnw exec:java -Dexec.args="strip-blue cat.jpg"
+./mvnw clean compile exec:java -Dexec.args="strip-blue cat.jpg"
 ```
 
 and check `img/output.jpg` again.
